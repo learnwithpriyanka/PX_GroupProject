@@ -1,0 +1,42 @@
+/* .col{
+    background-color: aqua;
+    width: 40px;
+    height: auto;
+} */
+
+.card{
+    background-color: antiquewhite;
+    width: 350px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-left:auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-color: #2D5F9A;
+    
+}
+
+.card:hover{
+    background-color: rgb(229, 229, 200);
+    box-shadow:0 8px 16px #2D5F9A ;
+    transition-duration: 1s;
+}
+
+.cards-containar{
+    display: flex;
+    background-color: #FDC500;
+}
+
+.card-img{
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+/* .welcome{
+    text-align: center;
+    background-color: #FDC500;
+    
+} */
+
+
+
