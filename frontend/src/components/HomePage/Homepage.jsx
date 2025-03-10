@@ -1,5 +1,6 @@
 import React from 'react'
 import Hero from './Hero';
+import Footer from '../../Footer';
 
 
 function Homepage() {
@@ -7,6 +8,7 @@ function Homepage() {
         <div>
            
             <Hero/>
+            <Footer/>
         </div>
      );
 }
