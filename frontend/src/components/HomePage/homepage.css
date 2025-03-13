@@ -13,23 +13,34 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
     border-color: #2D5F9A;
+    align-items: center;
     
 }
 
 .card:hover{
-    background-color: rgb(229, 229, 200);
-    box-shadow:0 8px 16px #2D5F9A ;
+    background-color: rgb(227, 229, 200);
+    box-shadow:0 10px 18px #2D5F9A ;
     transition-duration: 1s;
 }
 
 .cards-containar{
     display: flex;
-    background-color: #FDC500;
+    background-color:#f2e7bc;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+
+    
+
+    
+
 }
 
 .card-img{
-    width: 100%;
+    width: 90%;
+    height: 25vh;
     border-radius: 0.5rem;
+    margin: 15px;
 }
 
 /* .welcome{
@@ -37,6 +48,13 @@
     background-color: #FDC500;
     
 } */
+
+.hd{
+    background-color: #f2e7bc;
+    text-align: center;
+    margin-bottom: -10px;
+    margin-top: auto;
+}
 
 
 
