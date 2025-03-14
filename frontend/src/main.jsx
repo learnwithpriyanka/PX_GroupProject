@@ -11,6 +11,10 @@ import AboutPage from './components/About/AboutPage.jsx';
 import ContactPage from './components/Contact/ContactPage.jsx';
 import SignupPage from './components/SignUp/SignupPage.jsx';
 import NotFound from './NotFound.jsx';
+import NotesPage from './showpages/notes/NotesPage.jsx';
+import WorkbookPage from './showpages/workbook/WorkbookPage.jsx';
+import RecycleaPage from './showpages/recycle/RecyclePage.jsx';
+import ProjectPage from './showpages/project/ProjectPage.jsx';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -26,7 +30,17 @@ createRoot(document.getElementById('root')).render(
       <Route path="signup" element={<SignupPage/>}></Route>
       <Route path="*" element={<NotFound/>}></Route> 
 
-     </Routes>  
+      {/* navigation route */}
+      <Route path="/notes" element={<NotesPage/>}></Route>
+      <Route path="/workbook" element={<WorkbookPage/>}></Route>
+      <Route path="/recycle" element={<RecycleaPage/>}></Route>
+      <Route path="/project" element={<ProjectPage/>}></Route>
+      
+
+
+     </Routes> 
+
+     
 
   </BrowserRouter>
 );
