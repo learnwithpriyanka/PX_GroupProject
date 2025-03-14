@@ -15,6 +15,7 @@ import NotesPage from './showpages/notes/NotesPage.jsx';
 import WorkbookPage from './showpages/workbook/WorkbookPage.jsx';
 import RecycleaPage from './showpages/recycle/RecyclePage.jsx';
 import ProjectPage from './showpages/project/ProjectPage.jsx';
+import SignInPage from './components/signIn/SignInPage.jsx';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -26,6 +27,7 @@ createRoot(document.getElementById('root')).render(
       
       
       <Route path="contact" element={<ContactPage/>}></Route>
+      <Route path="signin" element={<SignInPage/>}></Route>
 
       <Route path="signup" element={<SignupPage/>}></Route>
       <Route path="*" element={<NotFound/>}></Route> 

@@ -41,6 +41,11 @@ function Navbar() {
                 </Link>
               </li>
               <li class="nav-item">
+                <Link class="nav-link active" to="signin">
+                  SignIn
+                </Link>
+              </li>
+              <li class="nav-item">
                 <Link class="nav-link active" to="signup">
                   Signup
                 </Link>
