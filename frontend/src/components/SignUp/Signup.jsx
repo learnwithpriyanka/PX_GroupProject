@@ -1,4 +1,5 @@
 import React from "react";
+import "../signIn/signin.css";
 
 function Signup() {
   return (
@@ -9,7 +10,12 @@ function Signup() {
           style={{ backgroundColor: "black", width: "60%", height: "100vh" }}
         >
           <div className="container">
-            <h2>PadhaiXpress</h2>
+            <img
+              src="/media/image/padhai.jpg"
+              alt="Padhai"
+              className="animateBg"
+              style={{ backgroundSize: "cover", width: "100%", height: "100vh" }}
+            />  
           </div>
         </div>
         <div
@@ -17,42 +23,56 @@ function Signup() {
           style={{ backgroundColor: "white", width: "40%", height: "100vh" }}
         >
           <h2 className="mt-5">Welcome back!</h2>
-          <h3 className="mb-3">Login to your account</h3>
-          <p1 className="">It's nice to see you again.Ready to order?</p1>
+          <h3 className="mb-3">Register to your account</h3>
+          <p1 className="">It's nice to see you</p1>
 
           <form>
             <div className="form-group">
-              <label for="email"> </label>
+              <label for="name"> </label>
+              <input
+                type="text"
+                className="form-control"
+                id="name"
+                placeholder="Your Name"
+              ></input>
+               <label for="email"> </label>
               <input
                 type="email"
                 className="form-control"
                 id="email"
-                placeholder="Your username or email"
+                placeholder="Your email"
               ></input>
               <label for="password"></label>
               <input
                 type="password"
                 className="form-control"
                 id="password"
-                placeholder="Enter your password"
+                placeholder="Enter new  password"
+              ></input>
+                 <label for="password"></label>
+              <input
+                type="password"
+                className="form-control"
+                id="password"
+                placeholder="Confirm password"
               ></input>
               <button
                 type="submit"
                 className="btn btn-primary mt-3"
                 style={{ width: "100%" }}
               >
-                Log in
+                Register
               </button>
               <br></br>
 
-              <input type="checkbox" className="mt-3" id="rememberMe"></input>
+              {/* <input type="checkbox" className="mt-3" id="rememberMe"></input>
               <label htmlFor="rememberMe" className="mt-2 p-2">
                 {" "}
                 Remember me
               </label>
               <a href="#" className="m-5 " style={{ color: "blue" }}>
                 Forgot password?
-              </a>
+              </a> */}
               <br></br>
               <hr></hr>
               <button type="submit" className=" mt-3" style={{ width: "100%" }}>
@@ -64,9 +84,9 @@ function Signup() {
                 style={{ textAlign: "center" }}
               >
                 <p>
-                  Don't have Account ?
+                  Login with your Account?
                   <a href="#" style={{ color: "blue" }}>
-                    Sign Up
+                    Login
                   </a>
                 </p>
               </div>
