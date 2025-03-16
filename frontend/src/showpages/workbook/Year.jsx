@@ -24,32 +24,38 @@ const workbooksData = [
     { "id": 20, "title": "Software Testing", "image": "media/image/work.jpg", "info": "Improve code quality" }
   ];
 
-function Year() {
-  const [search, setSearch] = useState("");
+function Year()
+{
+  const [search,setSearch]=useState("");
 
-  const filteredWorkbooks = workbooksData.filter((wb) =>
+  const filteredWorkbookData = workbooksData.filter((wb) =>
     wb.title.toLowerCase().includes(search.toLowerCase())
-  );
+);
 
-  return (
-    <div className="nik">
-      {/* Search Bar */}
-      <div className="p-3 " style={{borderRadius:"50px"}}>
-      <input
+
+
+  return(
+    <>
+    <div className="container">
+      <div className="search-bar">
+     <input 
         type="text"
-        placeholder="Search Engineering Books..."
+        placeholder="Engeneriing books..."
         value={search}
-        onChange={(e) => setSearch(e.target.value)}
-        className="search-bar"
+        onChange={(e)=>
+          setSearch(e.target.value)
+        }
       />
       </div>
+    </div>
 
-      {/* Workbooks Grid */}
+
+      {/* Book Grid */}
       <div className="grid">
-        {filteredWorkbooks.length > 0 ? (
-          filteredWorkbooks.map((wb) => (
+        {filteredWorkbookData.length > 0 ? (
+          filteredWorkbookData.map((wb) => (
             <div key={wb.id} className="card">
-              <img src={wb.image} alt={wb.title} className="card-img" />
+              <img src={wb.image} alt={wb.title} />
               <h2 className="card-title">{wb.title}</h2>
               <p className="card-info">{wb.info}</p>
             </div>
@@ -58,7 +64,7 @@ function Year() {
           <p>No books found.</p>
         )}
       </div>
-    </div>
+    </>
   );
 }
 
