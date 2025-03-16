@@ -1,7 +1,7 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
- import './index.css'
- import './components/HomePage/homepage.css'
+  import './index.css'
+  import './components/HomePage/homepage.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from './Navbar.jsx'
@@ -15,7 +15,8 @@ import NotesPage from './showpages/notes/NotesPage.jsx';
 import WorkbookPage from './showpages/workbook/WorkbookPage.jsx';
 import RecycleaPage from './showpages/recycle/RecyclePage.jsx';
 import ProjectPage from './showpages/project/ProjectPage.jsx';
-import SignInPage from './components/signIn/SignInPage.jsx';
+import SignInPage from './components/SignIn/SignInPage.jsx' 
+
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
