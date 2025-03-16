@@ -9,6 +9,7 @@ function Navbar() {
         <div class="container p-2">
           <Link class="navbar-brand" to="/">
             <img src='media/image/logo.svg' alt='logo'  style={{width:"25%"}}></img>
+            {/* <h1 style={{width:"25%"}}>PadhaiXpress</h1> */}
           </Link>
           <button
             class="navbar-toggler"
