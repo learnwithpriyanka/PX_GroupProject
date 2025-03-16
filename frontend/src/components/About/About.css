@@ -33,3 +33,43 @@
     margin-top: 20px;
     line-height: 1.8rem;
 }
+
+/* team */
+.team-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .team {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35px;
+  }
+  
+  .team-member {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .team-member img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+  }
+  
+  .team-member-info {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  /* .team-member-info h5 {
+    /* margin: 5px 0; */
+  /* } */
+  
+  /* .team-member-info p { */
+    /* margin: 10px 0; */
+  /* } */ 
