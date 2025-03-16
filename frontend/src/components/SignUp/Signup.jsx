@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "../signIn/signin.css";
+import { Link } from "react-router-dom";
+import axios from "axios";
 
 function Signup() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    axios.post("http://localhost:3002/signup", { name, email, password, confirmPassword })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
-    <div className="conatiner">
+    <div className="container">
       <div className="row">
         <div
           className="col-md-7"
@@ -15,7 +33,7 @@ function Signup() {
               alt="Padhai"
               className="animateBg"
               style={{ backgroundSize: "cover", width: "100%", height: "100vh" }}
-            />  
+            />
           </div>
         </div>
         <div
@@ -24,37 +42,41 @@ function Signup() {
         >
           <h2 className="mt-5">Welcome back!</h2>
           <h3 className="mb-3">Register to your account</h3>
-          <p1 className="">It's nice to see you</p1>
+          <p className="">It's nice to see you</p>
 
-          <form>
+          <form onSubmit={submitHandler}>
             <div className="form-group">
-              <label for="name"> </label>
+              <label htmlFor="name"> </label>
               <input
                 type="text"
                 className="form-control"
                 id="name"
                 placeholder="Your Name"
+                onChange={(e) => setName(e.target.value)}
               ></input>
-               <label for="email"> </label>
+              <label htmlFor="email"> </label>
               <input
                 type="email"
                 className="form-control"
                 id="email"
                 placeholder="Your email"
+                onChange={(e) => setEmail(e.target.value)}
               ></input>
-              <label for="password"></label>
+              <label htmlFor="password"></label>
               <input
                 type="password"
                 className="form-control"
                 id="password"
-                placeholder="Enter new  password"
+                placeholder="Enter new password"
+                onChange={(e) => setPassword(e.target.value)}
               ></input>
-                 <label for="password"></label>
+              <label htmlFor="confirmPassword"></label>
               <input
                 type="password"
                 className="form-control"
-                id="password"
+                id="confirmPassword"
                 placeholder="Confirm password"
+                onChange={(e) => setConfirmPassword(e.target.value)}
               ></input>
               <button
                 type="submit"
@@ -63,35 +85,26 @@ function Signup() {
               >
                 Register
               </button>
-              <br></br>
-
-              {/* <input type="checkbox" className="mt-3" id="rememberMe"></input>
-              <label htmlFor="rememberMe" className="mt-2 p-2">
-                {" "}
-                Remember me
-              </label>
-              <a href="#" className="m-5 " style={{ color: "blue" }}>
-                Forgot password?
-              </a> */}
-              <br></br>
-              <hr></hr>
-              <button type="submit" className=" mt-3" style={{ width: "100%" }}>
-                Continue with Google
-              </button>
-              <br></br>
-              <div
-                className="justify-content-center, mt-4"
-                style={{ textAlign: "center" }}
-              >
-                <p>
-                  Login with your Account?
-                  <a href="#" style={{ color: "blue" }}>
-                    Login
-                  </a>
-                </p>
-              </div>
             </div>
           </form>
+
+          <br></br>
+
+          <button type="submit" className="mt-3" style={{ width: "100%" }}>
+            Continue with Google
+          </button>
+          <br></br>
+          <div
+            className="justify-content-center mt-4"
+            style={{ textAlign: "center" }}
+          >
+            <p>
+              Login with your Account?
+              <Link to="/signin" style={{ color: "blue" }}>
+                Login
+              </Link>
+            </p>
+          </div>
         </div>
       </div>
     </div>

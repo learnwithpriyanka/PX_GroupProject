@@ -1,5 +1,6 @@
 import React from "react";
 import "./SignIn.css";
+import { Link } from "react-router-dom";
 
 function SignIn() {
   return (
@@ -44,6 +45,8 @@ function SignIn() {
               >
                 Log in
               </button>
+              </div>
+              </form>
               <br></br>
 
               <input type="checkbox" className="mt-3" id="rememberMe"></input>
@@ -66,16 +69,15 @@ function SignIn() {
               >
                 <p>
                   Don't have Account ?
-                  <a href="#" style={{ color: "blue" }}>
+                  <Link to="/signup" style={{ color: "blue" }}>
                     Sign Up
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>
-          </form>
         </div>
       </div>
-    </div>
+    
   );
 }
 
