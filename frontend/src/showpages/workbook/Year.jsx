@@ -37,27 +37,29 @@ function Year()
 
   return(
     <>
-    <div className="container">
+    <div className="all" >
+    <div className="ner">
       <div className="search-bar">
-     <input 
+     <input
         type="text"
-        placeholder="Engineering books..."
+        placeholder=" Search Engineering books..."
         value={search}
         onChange={(e)=>
           setSearch(e.target.value)
         }
       />
+     
       </div>
     </div>
 
 
       {/* Book Grid */}
-      <div className="grid">
+      <div className="grid" >
         {filteredWorkbookData.length > 0 ? (
           filteredWorkbookData.map((wb) => (
             <div key={wb.id} className="card">
               <img src={wb.image} alt={wb.title} />
-              <h2 className="card-title">{wb.title}</h2>
+              <h4 className="card-title">{wb.title}</h4>
               <p className="card-info">{wb.info}</p>
             </div>
           ))
@@ -65,6 +67,7 @@ function Year()
           <p>No books found.</p>
         )}
       </div>
+    </div>
     </>
   );
 }

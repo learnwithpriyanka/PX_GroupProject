@@ -1,3 +1,9 @@
+
+.all{
+  background-color: #f2e7bc;
+  margin-top: 0;
+
+}
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Default: 3 cards per row */
@@ -20,7 +26,9 @@
     }
   }
   
+  
   .card {
+    display: flex;
     background: #fff;
     border-radius: 10px;
     padding: 20px;
@@ -29,6 +37,9 @@
     transition: transform 0.2s ease-in-out;
     height:350px;
     width:338px;
+    overflow:hidden;
+    word-wrap: break-word;
+  overflow-wrap: break-word;
 
   }
   
@@ -36,16 +47,27 @@
     transform: scale(1.05);
   }
 
+  
   .search-bar {
     
     width: 100%;
-    max-width: 700px; /* Adjust max width as needed */
+    max-width: 700px; /* Maximum width of the input */
     padding: 10px;
     font-size: 16px;
     border: 2px solid #ccc;
     border-radius: 50px;
-    margin: 20px auto;
+    /* margin: 20px auto; */
+    margin-left: 350px;
     display: block; /* Centers the input */
+  }
+  .search-bar input{
+    width: 100%;
+  
+    padding: 20px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
   }
   
   .nik {
