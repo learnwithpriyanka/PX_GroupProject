@@ -11,7 +11,7 @@ function Signup() {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:3002/signup", { name, email, password, confirmPassword })
+    axios.post("http://127.0.0.1:3002/signup", { name, email, password, confirmPassword })
       .then((res) => {
         console.log(res);
       })
@@ -21,15 +21,15 @@ function Signup() {
   };
 
   return (
-    <div className="container">
-      <div className="row">
+    <div className="container m-0 p-0">
+      <div className="row   m-0 p-0">
         <div
-          className="col-md-7"
+          className="col-md-6 m-0 p-0"
           style={{ backgroundColor: "black", width: "60%", height: "100vh" }}
         >
-          <div className="container">
+          <div className="container p-0 m-0">
             <img
-              src="/media/image/padhai.jpg"
+              src="/media/image/image.webp"
               alt="Padhai"
               className="animateBg"
               style={{ backgroundSize: "cover", width: "100%", height: "100vh" }}
@@ -37,7 +37,7 @@ function Signup() {
           </div>
         </div>
         <div
-          className="col-md-5 p-5"
+          className="col-md-6 p-5"
           style={{ backgroundColor: "white", width: "40%", height: "100vh" }}
         >
           <h2 className="mt-5">Welcome back!</h2>
