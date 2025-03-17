@@ -1,0 +1,86 @@
+
+/* 
+.animationBg
+{
+    animation:animateBg 5s linear infinite;
+}
+
+@keyframes animateBg{
+    100%{
+        filter:hue-rotate(360deg);
+    }
+} */
+/* .animateBg {
+    animation: animateBg 5s linear infinite;
+  }
+  
+  @keyframes animateBg {
+    100% {
+      filter: hue-rotate(360deg);
+      background-color:yellow;
+      motion: reverse;
+    }
+  } */
+
+  .animateBg {
+    animation: shimmerEffect 5s linear infinite, pulseEffect 2s ease-in-out infinite alternate;
+    background: linear-gradient(90deg, #ff5733, #e9e772, #3357ff);
+    background-size: 200% 200%;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes shimmerEffect {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes pulseEffect {
+    0% {
+        transform: scale(1);
+        filter: brightness(100%);
+    }
+    50% {
+        transform: scale(1.02); /* Slight expansion */
+        filter: brightness(120%); /* Bright shimmer */
+    }
+    100% {
+        transform: scale(1);
+        filter: brightness(100%);
+    }
+}
+
+/* For an internal "wave" of light */
+.animateBg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%; /* Start off-screen */
+    height: 100%;
+    width: 200%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+    transform: skewX(-30deg); /* Angled shimmer */
+    animation: waveEffect 3s linear infinite;
+}
+
+@keyframes waveEffect {
+    0% {
+        left: -150%;
+    }
+    100% {
+        left: 150%; /* Move across the element */
+    }
+}

@@ -26,11 +26,11 @@ function SignIn() {
     <div className="container m-0 p-0">
       <div className="row m-0 p-0">
         <div
-          className="col-md-7"
+          className="col-md-7 m-0 p-0"
           style={{ backgroundColor: "black", width: "60%", height: "100vh" }}
         >
-          <div className="container">
-            <img src="/media/image/padhai.jpg" alt="Padhai"  className="animateBg" style={{backgroundSize:"cover", width:"100%", height:"100vh"}} />
+          <div className="container p-0 m-0">
+            <img src="/media/image/image.webp" alt="Padhai"  className="animateBg" style={{backgroundSize:"cover", width:"100%", height:"100vh"}} />
           </div>
         </div>
         <div
