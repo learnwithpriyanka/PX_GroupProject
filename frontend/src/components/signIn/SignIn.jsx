@@ -1,16 +1,36 @@
 import React from "react";
 import "./SignIn.css";
-
+import { Link, Navigate } from "react-router-dom";
+import axios from "axios";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 function SignIn() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  const submitHandler = (e) => {
+    e.preventDefault();
+    axios.post("http://127.0.0.1:3002/signin", { email, password })
+      .then((res) => {
+        console.log(res)
+        if(res.data === "success"){
+          Navigate("/");
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
-    <div className="conatiner">
-      <div className="row">
+    <div className="container m-0 p-0">
+      <div className="row m-0 p-0">
         <div
-          className="col-md-7"
+          className="col-md-7 m-0 p-0"
           style={{ backgroundColor: "black", width: "60%", height: "100vh" }}
         >
-          <div className="container">
-            <img src="/media/image/padhai.jpg" alt="Padhai"  className="animateBg" style={{backgroundSize:"cover", width:"100%", height:"100vh"}} />
+          <div className="container p-0 m-0">
+            <img src="/media/image/image.webp" alt="Padhai"  className="animateBg" style={{backgroundSize:"cover", width:"100%", height:"100vh"}} />
           </div>
         </div>
         <div
@@ -19,9 +39,9 @@ function SignIn() {
         >
           <h2 className="mt-5">Welcome back!</h2>
           <h3 className="mb-3">Login to your account</h3>
-          <p1 className="">It's nice to see you again.Ready to order?</p1>
+          <p className="">It's nice to see you again.Ready to order?</p>
 
-          <form>
+          <form onSubmit={submitHandler}>
             <div className="form-group">
               <label for="email"> </label>
               <input
@@ -29,6 +49,7 @@ function SignIn() {
                 className="form-control"
                 id="email"
                 placeholder="Your username or email"
+                onChange={(e) => setEmail(e.target.value)}
               ></input>
               <label for="password"></label>
               <input
@@ -36,6 +57,7 @@ function SignIn() {
                 className="form-control"
                 id="password"
                 placeholder="Enter your password"
+                onChange={(e) => setPassword(e.target.value)}
               ></input>
               <button
                 type="submit"
@@ -44,6 +66,8 @@ function SignIn() {
               >
                 Log in
               </button>
+              </div>
+              </form>
               <br></br>
 
               <input type="checkbox" className="mt-3" id="rememberMe"></input>
@@ -66,16 +90,15 @@ function SignIn() {
               >
                 <p>
                   Don't have Account ?
-                  <a href="#" style={{ color: "blue" }}>
+                  <Link to="/signup" style={{ color: "blue" }}>
                     Sign Up
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>
-          </form>
         </div>
       </div>
-    </div>
+    
   );
 }
 
