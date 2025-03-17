@@ -5,7 +5,7 @@ import './index.css'
 
 function Navbar() {
     return (  
-        <nav class="navbar navbar-expand-lg border-bottom" >
+        <nav class="navbar navbar-expand-lg border-bottom " >
         <div class="container p-2">
           <Link class="navbar-brand" to="/">
             <img src='media/image/logo.svg' alt='logo'  style={{width:"25%"}}></img>
