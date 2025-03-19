@@ -8,7 +8,7 @@ function Navbar() {
         <nav class="navbar navbar-expand-lg border-bottom" >
         <div class="container p-2">
           <Link class="navbar-brand" to="/">
-            <img src='media/image/logo.svg' alt='logo'  style={{width:"25%"}}></img>
+          <a href='#'><img src='media/image/newlogo.png' alt='logo' className='img' style={{width:"20%"}}></img></a>
           </Link>
           <button
             class="navbar-toggler"
@@ -31,12 +31,12 @@ function Navbar() {
                 </Link>
               </li>
               <li class="nav-item">
-                <Link class="nav-link active" aria-current="page" to="about" state={{color:"white"}}>
+                <Link class="nav-link active" aria-current="page" to="about" state={{color:"white"}} >
                   About us
                 </Link>
               </li>
               <li class="nav-item ">
-                <Link class="nav-link active" to="contact">
+                <Link class="nav-link active" to="contact" >
                   Contact
                 </Link>
               </li>

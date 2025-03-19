@@ -46,6 +46,12 @@
     border-radius: 50px;
     margin: 20px auto;
     display: block; /* Centers the input */
+   
+  }
+
+  .search-bar input{
+    border:none;
+    outline:none;
   }
   
   .nik {
