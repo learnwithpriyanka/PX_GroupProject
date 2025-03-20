@@ -23,11 +23,11 @@ function SignIn() {
   };
 
   return (
-    <div className="container m-0 p-0">
+    <div className="container-fluid m-0 p-0" style={{backgroundColor:"#f2e7bc"}}>
       <div className="row m-0 p-0">
         <div
           className="col-md-7 m-0 p-0"
-          style={{ backgroundColor: "black", width: "60%", height: "100vh" }}
+          style={{  width: "60%", height: "100vh" }}
         >
           <div className="container p-0 m-0">
             <img src="/media/image/image.webp" alt="Padhai"  className="animateBg" style={{backgroundSize:"cover", width:"100%", height:"100vh"}} />
@@ -35,7 +35,7 @@ function SignIn() {
         </div>
         <div
           className="col-md-5 p-5"
-          style={{ backgroundColor: "white", width: "40%", height: "100vh" }}
+          style={{  width: "40%", height: "100vh" }}
         >
           <h2 className="mt-5">Welcome back!</h2>
           <h3 className="mb-3">Login to your account</h3>
