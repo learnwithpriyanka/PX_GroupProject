@@ -1,21 +1,22 @@
 import React from "react";
 import "./SignIn.css";
+import { Link } from "react-router-dom";
 
 function SignIn() {
   return (
-    <div className="conatiner">
-      <div className="row">
+    <div className="conatiner m-0 p-0" style={{ backgroundColor: "#f2e7bc" }}>
+      <div className="row m-0 p-0">
         <div
-          className="col-md-7"
-          style={{ backgroundColor: "black", width: "60%", height: "100vh" }}
+          className="col-md-7 m-0 p-0"
+          style={{  width: "60%", height: "100vh" }}
         >
-          <div className="container">
-            <img src="/media/image/padhai.jpg" alt="Padhai"  className="animateBg" style={{backgroundSize:"cover", width:"100%", height:"100vh"}} />
+          <div className="container p-0 m-0">
+            <img src="/media/image/image.webp" alt="Padhai"  className="animateBg" style={{backgroundSize:"cover", width:"100%", height:"100vh"}} />
           </div>
         </div>
         <div
           className="col-md-5 p-5"
-          style={{ backgroundColor: "white", width: "40%", height: "100vh" }}
+          style={{  width: "40%", height: "100vh" }}
         >
           <h2 className="mt-5">Welcome back!</h2>
           <h3 className="mb-3">Login to your account</h3>
@@ -64,12 +65,12 @@ function SignIn() {
                 className="justify-content-center, mt-4"
                 style={{ textAlign: "center" }}
               >
-                <p>
-                  Don't have Account ?
-                  <a href="#" style={{ color: "blue" }}>
-                    Sign Up
-                  </a>
-                </p>
+             <p>
+              Login with your Account?
+              <Link to="/signup" style={{ color: "blue" }}>
+                Register
+              </Link>
+            </p>
               </div>
             </div>
           </form>
