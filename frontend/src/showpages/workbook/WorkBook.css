@@ -59,6 +59,12 @@
     /* margin: 20px auto; */
     margin-left: 350px;
     display: block; /* Centers the input */
+   
+  }
+
+  .search-bar input{
+    border:none;
+    outline:none;
   }
   .search-bar input{
     width: 100%;
