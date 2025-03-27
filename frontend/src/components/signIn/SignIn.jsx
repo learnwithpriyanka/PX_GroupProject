@@ -1,16 +1,17 @@
 import React from "react";
 import "./SignIn.css";
+import { Link } from "react-router-dom";
 
 function SignIn() {
   return (
-    <div className="conatiner">
-      <div className="row">
+    <div className="conatiner ">
+      <div className="row   ">
         <div
-          className="col-md-7"
+          className="col-md-7 p-0 m-0"
           style={{ backgroundColor: "black", width: "60%", height: "100vh" }}
         >
-          <div className="container">
-            <img src="/media/image/padhai.jpg" alt="Padhai"  className="animateBg" style={{backgroundSize:"cover", width:"100%", height:"100vh"}} />
+          <div className="container p-0 m-0">
+            <img src="/media/image/image.webp" alt="Padhai"  className="animateBg" style={{backgroundSize:"cover", width:"100%", height:"100vh"}} />
           </div>
         </div>
         <div
@@ -66,9 +67,9 @@ function SignIn() {
               >
                 <p>
                   Don't have Account ?
-                  <a href="#" style={{ color: "blue" }}>
+                  <Link to="/signup" style={{ color: "blue" }}>
                     Sign Up
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>
