@@ -6,7 +6,7 @@ function Card(){
 <div class="main1">
 <div class="card1">
     
-    <img src="/media/image/recycle.jpg" alt="Recycle Image"></img>
+    <img src="/media/image/recycle1.jpg" alt="Recycle Image"></img>
     <h3>Recycle with Us</h3>
     <p>Donate your used books and help reduce waste. We'll handle the rest.</p>
     <button class="donate-btn">Donate Now</button>
@@ -28,16 +28,20 @@ function Card(){
 </div>
 <div class="card1">
     
-    <img src="/media/image/recycle.jpg" alt="Recycle Image"></img>
+    <img src="/media/image/recycle1.jpg" alt="Recycle Image"></img>
     <h3>Simple Steps to Recycle  </h3>
     <p>Explore the Process
     Follow our step-by-step guide to learn how you can participate in our book </p>
     <button class="donate-btn">Explore the process</button>
 </div>
-<div class="h2">
+
+<div class="head2">
     <h3 >Recycling Made Easy</h3>
     <p>At Padhaixpress, we believe in making a difference. Our book recycling initiative is just one way we're working to create a more sustainable </p>
 </div>
+
+
+
 </div>
 
     )
